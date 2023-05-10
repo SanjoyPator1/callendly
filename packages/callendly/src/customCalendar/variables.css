@@ -1,0 +1,38 @@
+/* :root {
+    --primary-border-radius: 0.7em;
+    --secondary-border-radius: 0.4em;
+    --primary-primary-distance: 2rem;
+    --primary-secondary-distance: 1rem;
+    --title-size: 2rem;
+    --header-size: 1.4rem;
+    --sub-header-size: 1.2rem;
+    --body-size: 0.87rem;
+    --navbar-height: 40px;
+    --navbar-bottom-margin: 10px;
+    --sticky-item-top: 40px;
+    --padding: 1rem;
+    --padding-small: 0.6rem;
+    --gap: 1rem;
+    --color-0: #5e72eb;
+    --color-1: #4b92ff;
+    --color-2: #b7e3ff;
+    --color-3: #e7eff2;
+    --color-red: #ffa1b3;
+    --color-green: #cbf5af;
+    --color-blue: #b7e3ff;
+    --background-color: #d9dbdd;
+    --card-color: #f9f8fb;
+  
+    --light-red-color: #ffbdc9;
+    --light-green-color: #c9f9cd;
+    --light-blue-color: #c8ebf8;
+  
+    --dark-red-color: #f55050;
+    --dark-green-color: #538e15;
+    --dark-blue-color: #5e72eb;
+  
+    --full-screen-height: calc(
+      100% + var(--navbar-height) + var(--navbar-bottom-margin) + var(--padding) +
+        var(--top-content-height)
+    );
+  } */

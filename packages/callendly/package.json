@@ -1,0 +1,43 @@
+{
+    "name": "callendly",
+    "version": "0.0.0",
+    "private": false,
+    "description": "Simple easy to use calendar component for Next.js and React.js project",
+    "keywords": [
+      "callendly",
+      "calendar",
+      "next.js component",
+      "react.js component"
+    ],
+    "main": "./index.tsx",
+    "types": "./index.tsx",
+    "license": "MIT",
+    "scripts": {
+      "release:build": "tsc",
+      "release": "semantic-release"
+    },
+    "dependencies": {
+        "date-fns": "^2.30.0",
+        "react-icons": "^4.8.0",
+        "clsx": "^1.2.1"
+    },
+    "devDependencies": {
+      "@semantic-release/changelog": "6.0.1",
+      "@semantic-release/git": "10.0.1",
+      "@types/react": "17.0.37",
+      "@types/react-dom": "17.0.11",
+      "semantic-release": "19.0.2",
+      "tsconfig": "*",
+      "typescript": "4.5.3"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/biswarup35/material-you.git",
+      "directory": "packages/material-you"
+    },
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org/"
+    }
+  }
+  

@@ -1,0 +1,129 @@
+
+
+/* MAIN CALENDAR CONTAINER STYLE */
+
+.calendarContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 0.5rem;
+    gap: 0.2rem;
+    min-width: calc((1.7rem * 8) + 0.2rem);
+  }
+  
+  /* CALENDAR HEADER CONTAINER STYLE - INCLUDES : current month and year left and prev next button  */
+  .calendarContainer > .header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header > .headerDate{
+    background-color: white;
+  }
+
+  .headerDate > .headerDateFont{
+    font-weight: bolder;
+  }
+
+  .calendarContainer > .header > .headerButtonsContainer {
+    display: flex;
+    flex-flow: row;
+    gap: 0.5rem;
+  }
+
+  .headerButtonsContainer > .prevMonthButton, .nextMonthButton{
+    border: 0;
+    cursor: pointer;
+  }
+  
+  /* GRID FOR WEEK CONTAINER AND DAYS OF MONTH CONTAINER */
+  .sevenGrid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    gap: 1.5px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /* WEEK DAYS STYLE */
+  .daysOfWeekContainer{
+
+  }
+  .weekDaysKeyContainer{
+    width: 1.7rem;
+  }
+
+  .weekDaysFont{
+    font-weight: 400;
+    text-align: center;
+  }
+
+  /* MONTH DAYS STYLE */
+  .daysOfMonth{
+    padding-block: 0.2rem;
+  }
+
+  .monthDaysKeyContainer {
+    position: relative;
+    padding-bottom: 7px;
+  }
+
+  .monthDaysKeyContainer > .eventBubbleContainer{
+    position: absolute;
+    bottom: 1px;
+    left: 40%;
+    width: 5px;
+    height: 5px;
+  }
+
+  .eventBubbleContainer > .eventBubble{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #3B82F6;
+  }
+  
+  .button {
+    box-shadow: none;
+    text-transform: none;
+    background-color: white;
+    color: #969696;
+    border-radius: 50%;
+    border-color: transparent;
+    width: 1.7rem;
+    height: 1.7rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+  
+  
+  .button:active {
+      box-shadow: none;
+      background-color: black;
+      color: white;
+  }
+  
+  .button.isSameMonth {
+      color: black;
+  }
+  .button.isEqual {
+      background-color: var(--dark-blue-color);
+      color: white;
+  }
+  
+  .button:hover {
+    background-color: #0069d9;
+    color: white;
+    box-shadow: none;
+  }
+  .button.isToday {
+    background-color: red;
+    color: white;
+  }
+  
