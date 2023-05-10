@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import { Calendar } from "callendly";
-import { addDays, startOfDay } from "date-fns";
+import { addDays, startOfDay,format } from "date-fns";
 
 const eventData = [
   {
@@ -29,14 +29,23 @@ const eventData = [
 // console.log(eventData);
 
 export default function Home() {
+
+  const onDateMouseEnter = (date : Date) => {
+    console.log("onDateMouseEnter date", format(date, "yyyy-MM-dd"))
+  }
+
   return (
     <main className={styles.main}>
-      {/* <div> */}
+      <div style={{width:"300px"}}>
         <Calendar eventDataProps={eventData} eventKeyName="meetingDate" 
-          viewPrevNextMonth={false}
+          viewPrevNextMonth={true}
+          onDateMouseEnter={onDateMouseEnter}
           // weekDaysType="small"
         />
-      {/* </div> */}
+        <div>
+
+        </div>
+      </div>
     </main>
   );
 }

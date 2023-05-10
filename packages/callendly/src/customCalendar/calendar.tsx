@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, memo, useEffect } from "react";
+import React, { FC,useEffect } from "react";
 import styles from "./calendar.module.css";
 import "./mystyle.css";
 
@@ -15,13 +15,11 @@ import {
   isSameMonth,
   isToday,
   parse,
-  parseISO,
-  startOfMonth,
   startOfToday,
   startOfWeek,
 } from "date-fns";
 import { useState } from "react";
-import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+import {LeftArrowIcon,RightArrowIcon} from "../customIcons/CustomIcons"
 import clsx from "clsx";
 import {
   CalendarClassModel,
@@ -29,12 +27,14 @@ import {
 } from "../../models/callendlyModel";
 
 interface CalendarProps extends CalendarClassModel, CalendarStyleModel {
-  currentMonthProp?: string;
-  setCurrentMonthProp?: React.Dispatch<React.SetStateAction<string>>;
   setDaysProp?: React.Dispatch<React.SetStateAction<Date[]>>;
   onDateClick?: (date: Date) => void | Date;
+  onDateMouseEnter?: (date: Date) => void | Date;
+  onDateMouseLeave?: (date: Date) => void | Date;
   onPrevMonthClick?: () => void | Date;
   onNextMonthClick?: () => void | Date;
+  prevMonthButtonIcon?: React.ReactNode;
+  nextMonthButtonIcon?: React.ReactNode;
   eventDataProps?: any[];
   eventKeyName?: string;
   weekDaysType?: "small" | "medium";
@@ -42,16 +42,19 @@ interface CalendarProps extends CalendarClassModel, CalendarStyleModel {
 }
 
 const CustomCalendar: FC<CalendarProps> = ({
-  currentMonthProp,
-  setCurrentMonthProp,
   setDaysProp,
   onDateClick,
+  onDateMouseEnter,
+  onDateMouseLeave,
   onPrevMonthClick,
   onNextMonthClick,
+  prevMonthButtonIcon,
+  nextMonthButtonIcon,
   eventDataProps,
   eventKeyName,
   weekDaysType,
   viewPrevNextMonth = true,
+
 
   // class props
   calendarContainerClassProp,
@@ -177,14 +180,14 @@ const CustomCalendar: FC<CalendarProps> = ({
             style={Object.assign({}, prevMonthButtonStylesProp)}
             onClick={previousMonth}
           >
-            <BiLeftArrowAlt />
+            {prevMonthButtonIcon ? prevMonthButtonIcon : <LeftArrowIcon />}
           </button>
           <button
             className={clsx(styles.nextMonthButton, nextMonthButtonClassProp)}
             style={Object.assign({}, nextMonthButtonStylesProp)}
             onClick={nextMonth}
           >
-            <BiRightArrowAlt />
+            {nextMonthButtonIcon ? nextMonthButtonIcon : <RightArrowIcon />}
           </button>
         </div>
       </div>
@@ -229,7 +232,6 @@ const CustomCalendar: FC<CalendarProps> = ({
       >
         {days &&
           days.map((day, index) => {
-            console.log("day index: " + getDay(day)+ " for " + format(day, "dd-MM-yyyy"))
             return (
               <div
                 className={clsx(
@@ -252,6 +254,8 @@ const CustomCalendar: FC<CalendarProps> = ({
                     isTodayClassProp,
                   )}
                   onClick={() => handleOnDateClick(day)}
+                  onMouseEnter={()=> onDateMouseEnter && onDateMouseEnter(day)}
+                  onMouseLeave={()=> onDateMouseLeave && onDateMouseLeave(day)}
                   style={Object.assign({},
                     buttonStylesProp,isSameMonthStylesProp,isEqualStylesProp,isTodayStylesProp )}
                 >
