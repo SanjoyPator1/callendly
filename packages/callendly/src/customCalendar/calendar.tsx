@@ -38,6 +38,7 @@ interface CalendarProps extends CalendarClassModel, CalendarStyleModel {
   eventDataProps?: any[];
   eventKeyName?: string;
   weekDaysType?: "small" | "medium";
+  viewPrevNextMonth?: boolean
 }
 
 const CustomCalendar: FC<CalendarProps> = ({
@@ -50,6 +51,7 @@ const CustomCalendar: FC<CalendarProps> = ({
   eventDataProps,
   eventKeyName,
   weekDaysType,
+  viewPrevNextMonth = true,
 
   // class props
   calendarContainerClassProp,
@@ -105,16 +107,16 @@ const CustomCalendar: FC<CalendarProps> = ({
   const [eventData, setEventData] = useState(eventDataProps);
 
   let initialDaysData = eachDayOfInterval({
-    start: startOfWeek(firstDayCurrentMonth),
-    end: endOfWeek(endOfMonth(firstDayCurrentMonth)),
+    start: viewPrevNextMonth ? startOfWeek(firstDayCurrentMonth): firstDayCurrentMonth,
+    end: viewPrevNextMonth ? endOfWeek(endOfMonth(firstDayCurrentMonth)): endOfMonth(firstDayCurrentMonth),
   });
 
   const [days, setDays] = useState<Date[]>(initialDaysData);
 
   useEffect(() => {
     const daysData = eachDayOfInterval({
-      start: startOfWeek(parse(currentMonth, "MMM-yyyy", new Date())),
-      end: endOfWeek(endOfMonth(parse(currentMonth, "MMM-yyyy", new Date()))),
+      start: viewPrevNextMonth ? startOfWeek(firstDayCurrentMonth): firstDayCurrentMonth,
+      end: viewPrevNextMonth ? endOfWeek(endOfMonth(firstDayCurrentMonth)): endOfMonth(firstDayCurrentMonth),
     });
     setDays(daysData);
     setDaysProp && setDaysProp(daysData);
@@ -227,13 +229,14 @@ const CustomCalendar: FC<CalendarProps> = ({
       >
         {days &&
           days.map((day, index) => {
+            console.log("day index: " + getDay(day)+ " for " + format(day, "dd-MM-yyyy"))
             return (
               <div
                 className={clsx(
                   styles.monthDaysKeyContainer,
                   monthDaysKeyContainerClassProp
                 )}
-                style={Object.assign({}, monthDaysKeyContainerStylesProp)}
+                style={Object.assign({},{gridColumnStart: getDay(day) + 1}, monthDaysKeyContainerStylesProp)}
                 key={index}
               >
                 <button
@@ -249,9 +252,8 @@ const CustomCalendar: FC<CalendarProps> = ({
                     isTodayClassProp,
                   )}
                   onClick={() => handleOnDateClick(day)}
-                  style={Object.assign({},{
-                    gridColumnStart: getDay(day) + 1,
-                  },buttonStylesProp,isSameMonthStylesProp,isEqualStylesProp,isTodayStylesProp )}
+                  style={Object.assign({},
+                    buttonStylesProp,isSameMonthStylesProp,isEqualStylesProp,isTodayStylesProp )}
                 >
                   <time dateTime={format(day, "yyyy-MM-dd")}>
                     {format(day, "d")}

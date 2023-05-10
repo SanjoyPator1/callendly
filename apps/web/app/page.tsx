@@ -33,8 +33,8 @@ export default function Home() {
     <main className={styles.main}>
       {/* <div> */}
         <Calendar eventDataProps={eventData} eventKeyName="meetingDate" 
+          viewPrevNextMonth={false}
           // weekDaysType="small"
-          
         />
       {/* </div> */}
     </main>
