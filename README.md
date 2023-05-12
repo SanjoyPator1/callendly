@@ -70,6 +70,8 @@ Then use the component inside your preferrable wrapper. Its advisable to give a 
 
 **Owner Github Profile-** [Sanjoy Pator](https://github.com/SanjoyPator1) 
 
+For support or inquiries, please contact [sanjoypatorwork@gmail.com](mailto:sanjoypatorwork@gmail.com).
+
 ## Documentation
 To see more about the usage please follow the documentation
 
