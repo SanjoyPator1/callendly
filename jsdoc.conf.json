@@ -16,8 +16,8 @@
     },
     "opts": {
         "encoding": "utf8",
-        "readme": "packages/callendly/callendlyReadme.md",
-        "destination": "docs/",
+        "readme": "README.md",
+        "destination": "public/",
         "recurse": true,
         "verbose": true,
         "template": "./node_modules/clean-jsdoc-theme",
