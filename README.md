@@ -3,6 +3,8 @@
 ## Overview
 The Callendly component is a React/Next.js component that displays a calendar and allows users to interact with it by clicking on dates and using next/previous month buttons.
 
+![callendlyCalendar](https://ik.imagekit.io/5hubejuf2/Callendly/callendlyCalendar.png?updatedAt=1683892925649)
+
 ## Features
 
 - simple to use component
