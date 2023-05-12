@@ -77,14 +77,6 @@ To see more about the usage please follow the documentation on this [link](https
 
 ## Codesandbox
 [codesandbox link](https://codesandbox.io/s/callendly-calendar-01-9fkpwi?file=/src/CustomCalendar.tsx)
-<iframe
-  src="https://codesandbox.io/embed/callendly-calendar-01-9fkpwi?fontsize=10&hidenavigation=1&module=%2Fsrc%2FCustomCalendar.tsx&theme=dark&view=split"
-  style="width: 100%; height: 80vh; border: 0; border-radius: 4px; overflow: hidden;"
-  title="Custom Calendar"
-  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
-
 
 ## License
 
