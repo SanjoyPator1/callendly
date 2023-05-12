@@ -1,6 +1,6 @@
 {
     "name": "callendly",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "private": false,
     "homepage": "www.callendly.org",
     "description": "Simple easy to use calendar component for Next.js and React.js project",
