@@ -67,10 +67,16 @@ Then use the component inside your preferrable wrapper. Its advisable to give a 
 **Owner LinkedIn Profile-** [Sanjoy Pator](https://www.linkedin.com/in/sanjoy-pator-91a41a182/) 
 
 **Owner Github Profile-** [Sanjoy Pator](https://github.com/SanjoyPator1) 
+For support or inquiries, please contact [sanjoypatorwork@gmail.com](mailto:sanjoypatorwork@gmail.com).
+
 
 ## Documentation
 To see more about the usage please follow the documentation
 
+[Documentation link](https://callendly-six.vercel.app/global.html#CustomCalendar)
+
+## Open source
+This is an open source project so feel free to contribute. Fork the project and contribute. If you have any queries you can contact us directly through linkedin or any other medium available.
 
 ## License
 
