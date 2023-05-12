@@ -3,12 +3,16 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "docs": "jsdoc -c jsdoc.conf.json",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "generate-docs": "jsdoc --configure jsdoc.json --verbose"
   },
   "devDependencies": {
+    "clean-jsdoc-theme": "^4.2.7",
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
+    "jsdoc-ts-utils": "^4.0.0",
     "prettier": "^2.5.1",
     "turbo": "^1.9.3"
   },
@@ -17,5 +21,9 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "better-docs": "^2.7.2",
+    "jsdoc": "^4.0.2"
+  }
 }

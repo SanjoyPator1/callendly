@@ -1,0 +1,37 @@
+{
+    "tags": {
+      "allowUnknownTags": true,
+      "dictionaries": ["jsdoc", "closure"]
+    },
+    "source": {
+      "include": ["packages/callendly/src/customCalendar/calendar.tsx"],
+      "includePattern": "\\.(jsx|js|ts|tsx)$",
+      "excludePattern": "(^|\\/|\\\\)node_modules"
+    },
+    "plugins": ["plugins/markdown", "better-docs/component", "better-docs/typescript"],
+    "templates": {
+      "better-docs": {
+        "name": "Callendly"
+      }
+    },
+    "opts": {
+        "encoding": "utf8",
+        "readme": "packages/callendly/callendlyReadme.md",
+        "destination": "docs/",
+        "recurse": true,
+        "verbose": true,
+        "template": "./node_modules/clean-jsdoc-theme",
+        "theme_opts": {
+          "default_theme": "dark"
+        }
+    },
+    "theme_opts": {
+        "default_theme": "dark",
+        "homepageTitle": "Callendly calendar"
+      },
+      "markdown": {
+        "hardwrap": false,
+        "idInHeadings": true
+      }
+  }
+  
