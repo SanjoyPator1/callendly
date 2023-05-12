@@ -1,7 +1,8 @@
 {
     "name": "callendly",
-    "version": "0.0.0",
+    "version": "0.0.2",
     "private": false,
+    "homepage": "www.callendly.org",
     "description": "Simple easy to use calendar component for Next.js and React.js project",
     "keywords": [
       "callendly",
@@ -31,8 +32,8 @@
     },
     "repository": {
       "type": "git",
-      "url": "https://github.com/biswarup35/material-you.git",
-      "directory": "packages/material-you"
+      "url": "https://github.com/SanjoyPator1/callendly.git",
+      "directory": "packages/callendly"
     },
     "publishConfig": {
       "access": "public",
