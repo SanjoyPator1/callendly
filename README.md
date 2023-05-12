@@ -73,7 +73,7 @@ Then use the component inside your preferrable wrapper. Its advisable to give a 
 For support or inquiries, please contact [sanjoypatorwork@gmail.com](mailto:sanjoypatorwork@gmail.com).
 
 ## Documentation
-To see more about the usage please follow the documentation
+To see more about the usage please follow the documentation on this [link](https://www.callendly.org/global.html#CustomCalendar)
 
 
 ## License
